@@ -4,12 +4,4 @@ Clementine is a minimalist Sass boilerplate with a simple UI toolkit and basic s
 
 ### How To Use
 
-Download this repository and add to your project
-
-```zsh
-git clone https://github.com/joesanchezjr/clementine.git
-```
-
-### Dependencies
-
-- Sass
+Download the [latest version](https://github.com/joesanchezjr/clementine/releases) of this repository and add it to your Sass compatible project.
