@@ -34,8 +34,7 @@
   text-decoration: none;
 }
 
-.button,
-a.button,
+%button,
 button,
 [type="submit"],
 [type="reset"],
@@ -57,8 +56,7 @@ button,
   }
 }
 
-.accent-button,
-a.accent-button {
+%accent-button {
   color: $accent-button-color;
   border: 1px solid $accent-button-background;
   background: $accent-button-background;
@@ -72,8 +70,7 @@ a.accent-button {
   }
 }
 
-.muted-button,
-a.muted-button {
+%muted-button {
   background: $muted-background;
   border: $muted-border;
   color: $muted-color;
@@ -87,18 +84,15 @@ a.muted-button {
   }
 }
 
-.round-button,
-a.round-button {
+%round-button {
   border-radius: $round-buttons;
 }
 
-.square-button,
-a.square-button {
+%square-button {
   border-radius: 0;
 }
 
-.full-button,
-a.full-button {
+%full-button {
   display: block;
   width: 100%;
 }

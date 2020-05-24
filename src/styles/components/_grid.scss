@@ -1,31 +1,31 @@
-.full-container {
+%full-container {
   max-width: 100%;
   padding: 0 1rem;
 }
 
-.container {
+%container {
   max-width: $x-large;
   padding: 0 $padding;
   margin-left: auto;
   margin-right: auto;
 }
 
-.medium-container {
-  @extend .container;
+%medium-container {
+  @extend %container;
   max-width: $medium;
 }
 
-.large-container {
-  @extend .container;
+%large-container {
+  @extend %container;
   max-width: $large;
 }
 
-.content-section {
+%content-section {
   padding: $content-padding-mobile;
 }
 
 @include tablet-breakpoint {
-  .content-section {
+  %content-section {
     padding: $content-padding;
   }
 }
@@ -41,29 +41,29 @@
 }
 
 // Flex row
-.flex-row {
+%flex-row {
   @extend %row-margin;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.flex-small,
-.flex-large {
+%flex-small,
+%flex-large {
   @extend %column-padding;
   flex-basis: 100%;
   margin-bottom: $margin-bottom;
 }
 
 @include tablet-breakpoint {
-  .flex-small {
+  %flex-small {
     flex: 1;
     margin-bottom: 0;
   }
 }
 
 @include laptop-breakpoint {
-  .flex-large {
+  %flex-large {
     flex: 1;
     margin-bottom: 0;
   }
