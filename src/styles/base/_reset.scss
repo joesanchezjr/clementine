@@ -1,13 +1,9 @@
-html {
-  box-sizing: border-box;
-}
-
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
-figure {
-  margin: 0;
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: 0 !important;
 }
