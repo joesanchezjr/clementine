@@ -1,38 +1,29 @@
 // Placeholders ---------------------------------------------------------------
 
 %container {
-  max-width: $x-large;
+  max-width: calc(#{$x-large} + #{$padding});
   padding: 0 $padding;
   margin-left: auto;
   margin-right: auto;
-}
-
-%column-padding {
-  padding-left: $column-padding;
-  padding-right: $column-padding;
-}
-
-%row-margin {
-  margin-left: -$column-padding;
-  margin-right: -$column-padding;
 }
 
 // Styles ---------------------------------------------------------------------
 
 %container-medium {
   @extend %container;
-  max-width: $medium;
+  max-width: calc(#{$medium} + #{$padding});
 }
 
 %container-large {
   @extend %container;
-  max-width: $large;
+  max-width: calc(#{$large} + #{$padding});
 }
 
 %container-full {
   @extend %container;
   max-width: 100%;
 }
+
 section {
-  padding: $section-padding-y 0;
+  padding: $section-padding;
 }
