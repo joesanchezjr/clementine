@@ -82,3 +82,9 @@ a {
     text-decoration: underline;
   }
 }
+
+::selection {
+  color: $selection-font-color;
+  background: $selection-background;
+  opacity: 1;
+}

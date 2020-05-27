@@ -27,11 +27,8 @@ $gray-900: #212529 !default;
 
 $primary-color: $black !default;
 $secondary-color: $gray-700 !default;
-$alternate-background: #fafafa !default;
-$alternate-color: #404040 !default;
 $link-color: $primary-color !default;
 $link-action-color: darken($link-color, 15%) !default;
-$highlight: #ffeea8 !default;
 $error: #d33c40 !default;
 $success: #29de7d !default;
 $bq-border: 16px solid #f0f0f0 !default;
@@ -53,6 +50,11 @@ $monospace-font-stack: Consolas, "Andale Mono WT", "Andale Mono",
   "Courier New", Courier, monospace !default;
 
 $sans-serif-font-stack: $system-font-stack !default;
+
+// Text Selection Styles
+
+$selection-background: $primary-color !default;
+$selection-font-color: $white !default;
 
 // Paragraph Font Styles
 
