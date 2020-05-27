@@ -15,18 +15,6 @@ $desktop: $x-large !default;
 
 $white: #ffffff !default;
 $black: #000000 !default;
-$primary-color: #0366ee !default;
-$secondary-color: #29de7d !default;
-$accent-color: #cdcdcd !default;
-$alternate-background: #fafafa !default;
-$alternate-color: #404040 !default;
-$link-color: $primary-color !default;
-$link-action-color: darken($link-color, 15%) !default;
-$highlight: #ffeea8 !default;
-$error: #d33c40 !default;
-$success: #29de7d !default;
-$bq-border: 16px solid #f0f0f0 !default;
-
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -36,6 +24,17 @@ $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
+
+$primary-color: $black !default;
+$secondary-color: $gray-700 !default;
+$alternate-background: #fafafa !default;
+$alternate-color: #404040 !default;
+$link-color: $primary-color !default;
+$link-action-color: darken($link-color, 15%) !default;
+$highlight: #ffeea8 !default;
+$error: #d33c40 !default;
+$success: #29de7d !default;
+$bq-border: 16px solid #f0f0f0 !default;
 
 // Typography -----------------------------------------------------------------
 
@@ -105,8 +104,8 @@ $borders: $border-width $border-style $border-color !default;
 // Buttons --------------------------------------------------------------------
 
 $button-background: $primary-color !default;
-$button-background-hover: darken($button-background, 10%) !default;
-$button-color: #ffffff !default;
+$button-background-hover: lighten($button-background, 15%) !default;
+$button-color: $white !default;
 $button-font-weight: 600 !default;
 $button-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue,
   Helvetica, Arial, sans-serif !default;
@@ -117,18 +116,13 @@ $button-border-color: $button-background !default;
 $button-border-radius: $border-radius !default;
 $button-text-transform: none !default;
 
-$accent-button-background: $secondary-color !default;
-$accent-button-color: #ffffff !default;
-$accent-button-color-hover: #ffffff !default;
-
-$muted-border: 1px solid $accent-color !default;
-$muted-border-hover: 1px solid darken($accent-color, 30%) !default;
-$muted-background: transparent !default;
-$muted-background-hover: transparent !default;
-$muted-color: darken($accent-color, 50%) !default;
-$muted-color-hover: darken($accent-color, 50%) !default;
-
-$round-buttons: 40px !default;
+$button-outline-background: transparent !default;
+$button-outline-background-hover: $button-background !default;
+$button-outline-border-color: $button-border-color !default;
+$button-outline-border-width: $button-border-width !default;
+$button-outline-border-style: $button-border-style !default;
+$button-outline-color: $button-background !default;
+$button-outline-color-hover: $white !default;
 
 // Forms ----------------------------------------------------------------------
 
