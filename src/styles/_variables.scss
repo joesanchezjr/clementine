@@ -127,7 +127,7 @@ $button-outline-color-hover: $white !default;
 // Forms ----------------------------------------------------------------------
 
 $input-background: transparent !default;
-$placeholder: darken($accent-color, 20%) !default;
+$placeholder: $gray-600 !default;
 $form-border: 1px solid $border-color !default;
 $form-border-hover: 1px solid darken($border-color, 10%) !default;
 $form-border-focus: 1px solid $link-color !default;
