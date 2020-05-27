@@ -13,7 +13,6 @@
   text-transform: $button-text-transform;
   padding: 0.75rem 1.25rem;
   margin: 0 0 0.5rem 0;
-  vertical-align: middle;
   text-align: center;
   cursor: pointer;
   text-decoration: none;
@@ -49,11 +48,6 @@ button,
 %button {
   @extend %buttons;
 
-  &::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-  }
-
   &:hover:not([disabled]) {
     @extend %buttons-hover;
   }
@@ -62,8 +56,14 @@ button,
   &:active:not([disabled]) {
     @extend %buttons-focus;
   }
+
   &[disabled] {
     @extend %buttons-disabled;
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
   }
 }
 
