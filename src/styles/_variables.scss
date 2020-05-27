@@ -15,18 +15,6 @@ $desktop: $x-large !default;
 
 $white: #ffffff !default;
 $black: #000000 !default;
-$primary-color: #0366ee !default;
-$secondary-color: #29de7d !default;
-$accent-color: #cdcdcd !default;
-$alternate-background: #fafafa !default;
-$alternate-color: #404040 !default;
-$link-color: $primary-color !default;
-$link-action-color: darken($link-color, 15%) !default;
-$highlight: #ffeea8 !default;
-$error: #d33c40 !default;
-$success: #29de7d !default;
-$bq-border: 16px solid #f0f0f0 !default;
-
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -37,55 +25,70 @@ $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 
+$primary-color: $black !default;
+$secondary-color: $gray-700 !default;
+$link-color: $primary-color !default;
+$link-action-color: darken($link-color, 15%) !default;
+$error: #d33c40 !default;
+$success: #29de7d !default;
+$bq-border: 16px solid #f0f0f0 !default;
+
 // Typography -----------------------------------------------------------------
 
-$font-family-system: -apple-system, BlinkMacSystemFont, Helvetica Neue,
-  Helvetica, Arial, sans-serif !default;
+// Font Stacks
 
-$font-family-serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif",
+$system-font-stack: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
+  Arial, sans-serif !default;
+
+$serif-font-stack: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif",
   Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia,
   serif !default;
 
-$font-family-monospace: Consolas, "Andale Mono WT", "Andale Mono",
+$monospace-font-stack: Consolas, "Andale Mono WT", "Andale Mono",
   "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
   "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco,
   "Courier New", Courier, monospace !default;
 
-$font-family-sans-serif: $font-family-system !default;
+$sans-serif-font-stack: $system-font-stack !default;
 
-$font-color: $black !default;
-$font-size: 1rem !default;
-$font-family: $font-family-sans-serif !default;
-$line-height: 1.6 !default;
-$font-style: normal !default;
-$font-variant: normal !default;
-$font-weight: normal !default;
+// Text Selection Styles
 
-$heading-margin-bottom: 0.5rem !default;
+$selection-background: $primary-color !default;
+$selection-font-color: $white !default;
+
+// Paragraph Font Styles
+
+$paragraph-font-color: $black !default;
+$paragraph-font-family: $sans-serif-font-stack !default;
+$paragraph-font-size: 1rem !default;
+$paragraph-line-height: 1.8 !default;
+$paragraph-font-weight: normal !default;
+$paragraph-font-style: normal !default;
+$paragraph-font-variant: normal !default;
+$paragraph-margin-bottom: 1.5rem !default;
+
+// Heading Font Styles
+
 $heading-font-color: $black !default;
-$heading-font-family: $font-family !default;
-$heading-line-height: 1.2 !default;
-$heading-font-style: normal !default;
+$heading-font-family: $paragraph-font-family !default;
+$heading-line-height: 1.1 !default;
 $heading-font-weight: 700 !default;
+$heading-font-style: normal !default;
+$heading-margin-bottom: 0.65rem !default;
 
 $scale: 1.33;
 
-$h1: $font-size * power($scale, 4) !default;
-$h2: $font-size * power($scale, 3) !default;
-$h3: $font-size * power($scale, 2) !default;
-$h4: $font-size * power($scale, 1) !default;
-$h5: $font-size * power($scale, -1) !default;
-$h6: $font-size * power($scale, -2) !default;
+$h1-font-size: $paragraph-font-size * power($scale, 4) !default; // 3.129rem
+$h2-font-size: $paragraph-font-size * power($scale, 3) !default; // 2.353rem
+$h3-font-size: $paragraph-font-size * power($scale, 2) !default; // 1.769rem
+$h4-font-size: $paragraph-font-size * power($scale, 1) !default; // 1.33rem
+$h5-font-size: $paragraph-font-size * power($scale, 0) !default; // 1rem
+$h6-font-size: $paragraph-font-size * power($scale, -1) !default; // 0.752rem
 
 // Spacing --------------------------------------------------------------------
 
 $padding: 1rem !default;
-$margins: 1.5rem !default;
-$content-padding: 60px 0 !default;
-$content-padding-mobile: 30px 0 !default;
-
-$column-padding: 1rem !default;
-$margin-bottom: 1rem !default;
+$section-padding: $padding * 2 0 !default;
 
 // Borders --------------------------------------------------------------------
 
@@ -98,8 +101,8 @@ $borders: $border-width $border-style $border-color !default;
 // Buttons --------------------------------------------------------------------
 
 $button-background: $primary-color !default;
-$button-background-hover: darken($button-background, 10%) !default;
-$button-color: #ffffff !default;
+$button-background-hover: lighten($button-background, 15%) !default;
+$button-color: $white !default;
 $button-font-weight: 600 !default;
 $button-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue,
   Helvetica, Arial, sans-serif !default;
@@ -110,23 +113,18 @@ $button-border-color: $button-background !default;
 $button-border-radius: $border-radius !default;
 $button-text-transform: none !default;
 
-$accent-button-background: $secondary-color !default;
-$accent-button-color: #ffffff !default;
-$accent-button-color-hover: #ffffff !default;
-
-$muted-border: 1px solid $accent-color !default;
-$muted-border-hover: 1px solid darken($accent-color, 30%) !default;
-$muted-background: transparent !default;
-$muted-background-hover: transparent !default;
-$muted-color: darken($accent-color, 50%) !default;
-$muted-color-hover: darken($accent-color, 50%) !default;
-
-$round-buttons: 40px !default;
+$button-outline-background: transparent !default;
+$button-outline-background-hover: $button-background !default;
+$button-outline-border-color: $button-border-color !default;
+$button-outline-border-width: $button-border-width !default;
+$button-outline-border-style: $button-border-style !default;
+$button-outline-color: $button-background !default;
+$button-outline-color-hover: $white !default;
 
 // Forms ----------------------------------------------------------------------
 
 $input-background: transparent !default;
-$placeholder: darken($accent-color, 20%) !default;
+$placeholder: $gray-600 !default;
 $form-border: 1px solid $border-color !default;
 $form-border-hover: 1px solid darken($border-color, 10%) !default;
 $form-border-focus: 1px solid $link-color !default;

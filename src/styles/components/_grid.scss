@@ -1,0 +1,29 @@
+// Placeholders ---------------------------------------------------------------
+
+%container {
+  max-width: calc(#{$x-large} + #{$padding});
+  padding: 0 $padding;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Styles ---------------------------------------------------------------------
+
+%container-medium {
+  @extend %container;
+  max-width: calc(#{$medium} + #{$padding});
+}
+
+%container-large {
+  @extend %container;
+  max-width: calc(#{$large} + #{$padding});
+}
+
+%container-full {
+  @extend %container;
+  max-width: 100%;
+}
+
+section {
+  padding: $section-padding;
+}

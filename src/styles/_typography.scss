@@ -1,0 +1,90 @@
+// Placeholders ---------------------------------------------------------------
+
+%headings {
+  margin-top: 0;
+  margin-bottom: $heading-margin-bottom;
+  font-family: $heading-font-family;
+  font-style: $heading-font-style;
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
+  color: $heading-font-color;
+}
+
+// Styles ---------------------------------------------------------------------
+
+:root {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 100%; // hoping for browser default of 16px, but not making pixels for accessibility
+  @include tablet-breakpoint {
+    font-size: 112.5%; // if 16px default, this is 18px
+  }
+}
+
+body {
+  color: $paragraph-font-color;
+  font-family: $paragraph-font-family;
+  font-size: $paragraph-font-size;
+  line-height: $paragraph-line-height;
+  font-weight: $paragraph-font-weight;
+  font-style: $paragraph-font-style;
+  font-variant: $paragraph-font-variant;
+}
+
+p {
+  margin: 0 0 $paragraph-margin-bottom 0;
+}
+
+h1,
+%h1 {
+  @extend %headings;
+  font-size: $h1-font-size;
+}
+
+h2,
+%h2 {
+  @extend %headings;
+  font-size: $h2-font-size;
+}
+
+h3,
+%h3 {
+  @extend %headings;
+  font-size: $h3-font-size;
+}
+
+h4,
+%h4 {
+  @extend %headings;
+  font-size: $h4-font-size;
+}
+
+h5,
+%h5 {
+  @extend %headings;
+  font-size: $h5-font-size;
+}
+
+h6,
+%h6 {
+  @extend %headings;
+  font-size: $h6-font-size;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $link-action-color;
+    text-decoration: underline;
+  }
+}
+
+::selection {
+  color: $selection-font-color;
+  background: $selection-background;
+  opacity: 1;
+}

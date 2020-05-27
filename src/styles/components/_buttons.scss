@@ -1,6 +1,8 @@
+// Placeholders ---------------------------------------------------------------
+
 %buttons {
   -webkit-appearance: none;
-  display: inline-block;
+  display: block;
   border: $button-border-width $button-border-style $button-border-color;
   border-radius: $button-border-radius;
   background: $button-background;
@@ -11,7 +13,6 @@
   text-transform: $button-text-transform;
   padding: 0.75rem 1.25rem;
   margin: 0 0 0.5rem 0;
-  vertical-align: middle;
   text-align: center;
   cursor: pointer;
   text-decoration: none;
@@ -33,72 +34,49 @@
   color: $button-color;
   text-decoration: none;
 }
+%buttons-disabled {
+  opacity: 0.35;
+  cursor: default;
+}
 
-.button,
-a.button,
+// Styles ---------------------------------------------------------------------
+
 button,
 [type="submit"],
 [type="reset"],
-[type="button"] {
+[type="button"],
+%button {
   @extend %buttons;
+
+  &:hover:not([disabled]) {
+    @extend %buttons-hover;
+  }
+
+  &:focus:not([disabled]),
+  &:active:not([disabled]) {
+    @extend %buttons-focus;
+  }
+
+  &[disabled] {
+    @extend %buttons-disabled;
+  }
 
   &::-moz-focus-inner {
     border: 0;
     padding: 0;
   }
+}
 
-  &:hover {
-    @extend %buttons-hover;
+%button-outline {
+  color: $button-outline-color;
+  background: $button-outline-background;
+
+  &:hover:not([disabled]),
+  &:focus:not([disabled]),
+  &:active:not([disabled]) {
+    color: $button-outline-color-hover;
+    border: $button-outline-border-width $button-outline-border-style solid
+      darken($button-outline-border-color, 10%);
+    background: $button-outline-background-hover;
   }
-
-  &:focus,
-  &:active {
-    @extend %buttons-focus;
-  }
-}
-
-.accent-button,
-a.accent-button {
-  color: $accent-button-color;
-  border: 1px solid $accent-button-background;
-  background: $accent-button-background;
-
-  &:hover,
-  &:focus,
-  &:active {
-    color: $accent-button-color-hover;
-    border: 1px solid darken($accent-button-background, 10%);
-    background: darken($accent-button-background, 10%);
-  }
-}
-
-.muted-button,
-a.muted-button {
-  background: $muted-background;
-  border: $muted-border;
-  color: $muted-color;
-
-  &:hover,
-  &:focus,
-  &:active {
-    color: $muted-color-hover;
-    border: $muted-border-hover;
-    background: $muted-background-hover;
-  }
-}
-
-.round-button,
-a.round-button {
-  border-radius: $round-buttons;
-}
-
-.square-button,
-a.square-button {
-  border-radius: 0;
-}
-
-.full-button,
-a.full-button {
-  display: block;
-  width: 100%;
 }
