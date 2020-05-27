@@ -39,48 +39,55 @@ $gray-900: #212529 !default;
 
 // Typography -----------------------------------------------------------------
 
-$font-family-system: -apple-system, BlinkMacSystemFont, Helvetica Neue,
-  Helvetica, Arial, sans-serif !default;
+// Font Stacks
 
-$font-family-serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif",
+$system-font-stack: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
+  Arial, sans-serif !default;
+
+$serif-font-stack: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif",
   Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia,
   serif !default;
 
-$font-family-monospace: Consolas, "Andale Mono WT", "Andale Mono",
+$monospace-font-stack: Consolas, "Andale Mono WT", "Andale Mono",
   "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
   "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco,
   "Courier New", Courier, monospace !default;
 
-$font-family-sans-serif: $font-family-system !default;
+$sans-serif-font-stack: $system-font-stack !default;
 
-$font-color: $black !default;
-$font-size: 1rem !default;
-$font-family: $font-family-sans-serif !default;
-$line-height: 1.6 !default;
-$font-style: normal !default;
-$font-variant: normal !default;
-$font-weight: normal !default;
+// Paragraph Font Styles
 
-$heading-margin-bottom: 0.5rem !default;
+$paragraph-font-color: $black !default;
+$paragraph-font-family: $sans-serif-font-stack !default;
+$paragraph-font-size: 1rem !default;
+$paragraph-line-height: 1.8 !default;
+$paragraph-font-weight: normal !default;
+$paragraph-font-style: normal !default;
+$paragraph-font-variant: normal !default;
+$paragraph-margin-bottom: 1.5rem !default;
+
+// Heading Font Styles
+
 $heading-font-color: $black !default;
-$heading-font-family: $font-family !default;
-$heading-line-height: 1.2 !default;
-$heading-font-style: normal !default;
+$heading-font-family: $paragraph-font-family !default;
+$heading-line-height: 1.1 !default;
 $heading-font-weight: 700 !default;
+$heading-font-style: normal !default;
+$heading-margin-bottom: 0.65rem !default;
 
 $scale: 1.33;
 
-$h1: $font-size * power($scale, 4) !default;
-$h2: $font-size * power($scale, 3) !default;
-$h3: $font-size * power($scale, 2) !default;
-$h4: $font-size * power($scale, 1) !default;
-$h5: $font-size * power($scale, -1) !default;
-$h6: $font-size * power($scale, -2) !default;
+$h1-font-size: $paragraph-font-size * power($scale, 4) !default; // 3.129rem
+$h2-font-size: $paragraph-font-size * power($scale, 3) !default; // 2.353rem
+$h3-font-size: $paragraph-font-size * power($scale, 2) !default; // 1.769rem
+$h4-font-size: $paragraph-font-size * power($scale, 1) !default; // 1.33rem
+$h5-font-size: $paragraph-font-size * power($scale, 0) !default; // 1rem
+$h6-font-size: $paragraph-font-size * power($scale, -1) !default; // 0.752rem
 
 // Spacing --------------------------------------------------------------------
 
 $padding: 1rem !default;
-$margins: 1.5rem !default;
+
 $content-padding: 60px 0 !default;
 $content-padding-mobile: 30px 0 !default;
 

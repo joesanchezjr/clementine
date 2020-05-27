@@ -9,8 +9,6 @@
     @for $i from 1 through -$exponent {
       $value: $value / $number;
     }
-  } @else {
-    $value: $value * $number;
   }
 
   @return $value;
